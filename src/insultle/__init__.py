@@ -3,6 +3,7 @@
 
 import pygame
 import random
+from pathlib import Path
 
 pygame.init()
 
@@ -44,10 +45,23 @@ while running:
         #Non ci sono solo gli insulti, erano troppo pochi, così l'utente può inserire la parola che vuole, verificare le lettere e poi scrivere l'insulto
         
         ParolaSceltaComputer = random.choice(ParoleComputer)
-        #Sceglie un insulto a caso dalla lista 
+        #Sceglie un insulto a caso dalla lista
         
         
-            
+#QUESTA PARTE NON è FINITA, SERVE IMPLEMENTARE LE FUNZIONI, MODIFICARE SE NECESSARIO
+        
+        ParolaInserita= ""             #La parola inserita dall'utente  DA IMPLEMENTARE CON FUNZIONI
+        if ParolaInserita == ParolaSceltaComputer:  #VINTO
+            print("Hai Vinto!")
+            file = open("FileVincite.py", "a")
+            file.write("Partita vinta!")
+            pygame.quit()
+       #if #PERSO:
+#             print("Hai perso...")
+#             file = open("FileVincite.py", "a")
+#             file.write("Partita persa!")
+#             pygame.quit()
+
         
         
         #gli elementi si metto in ordine: sfondo, terzo, secondo e primo piano (vengono aggiunti sempre)
